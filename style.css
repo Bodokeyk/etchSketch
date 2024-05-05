@@ -58,7 +58,7 @@ flex-basis: auto;
 display: flex;
 }
 .childDivs{
-background-color: greenyellow;
+background-color: rgb(255, 255, 255);
 flex-shrink: 1;
 flex-basis: auto;
 }
