@@ -34,6 +34,7 @@ body{
 .main-container{
   flex-grow: 1;
   background-color: grey;
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-evenly;
   text-align: center;
@@ -55,6 +56,27 @@ border: 1px white solid;
 flex-wrap:wrap;
 border-radius: 15px;
 }
+.container-block{
+  flex-grow: 1;
+}
+.middle{
+  background-color: rgb(255, 255, 255);
+  min-width: 980px;
+  display: flex;
+  flex-direction: column;
+  margin: 1px;
+}
+.gridDiv{
+background-color: white;
+flex-grow: 0;
+flex-shrink: 1;
+flex-basis: auto;
+display: flex;
+}
+.childDivs{
+flex-shrink: 1;
+flex-basis: auto;
+}
 .left, .right{
   display:flex;
   justify-content: center;
@@ -65,9 +87,19 @@ button{
  align-self:flex-end;
 padding: 32px 32px;
 border-radius: 100%;
+  align-items: flex-end;
+  background-color: red;
+  padding-bottom: 32px;
+}
+.buttons{
+padding: 48px 48px;
+border-radius: 100%;
+background-color: white;
+box-shadow: none;
 }
 .main-footer{
 background-color: red;
 height: 100px;
 
 }
+
