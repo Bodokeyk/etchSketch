@@ -49,42 +49,31 @@ pad.addEventListener("mouseover", (event) => {
       case "tonos": 
 
       //obtenemos el color del fondo y sacamos el Alpha
-      console.log(event.target.style.backgroundColor);
       let val1 = event.target.style.backgroundColor;
        let cosito = +val1.slice(-3, -1);
-      console.log(cosito)
+
       //si tiene alfa, se activa la funcion para ir agregando mas poco a poco
       if(cosito >= 0.1 && cosito < 1.0){
-        console.log("este ya tiene otro color");
         event.target.style.backgroundColor = `rgb(from ${val1} r g b / calc(Alpha + 0.1))`
+
       }else{
         //si no tenia alfa, se le asigna uno y la proxima vez ya tendra alpha
-        console.log("No tenia color")
+        
         event.target.style.backgroundColor = `rgb(${arrayColores[0]})`
         let cosillo = event.target.style.backgroundColor;
         event.target.style.backgroundColor = `rgb(from ${cosillo} r g b / 0.1)`
       }
 
       break;
-      
-      /* if(event.target.style.backgroundColor){
-        let colorCambiar = event.target.style.backgroundColor;
-        console.log(event.target.style.backgroundColor)
-        event.target.style.backgroundColor = `rgb(from ${colorCambiar} r g b /calc(A + 0.1))`
-        console.log(event.target.style.backgroundColor)
-        break;
-      }else {
-      event.target.style.backgroundColor = `rgba(${colorBase})`
-      break;
-    }
-  */ }
+     }
 }
 })
 
 //evento en boton, para insertar cuadricula
 botonGrid.addEventListener('click', () => {
   const seleccionUsuario = Number(prompt('Ingrese en cuanto quiere dividir el area'))
-  if(seleccionUsuario > 100 || Number.isNaN(seleccionUsuario)){
+  console.log(seleccionUsuario)
+  if(seleccionUsuario > 100  || seleccionUsuario <= 0 || Number.isNaN(seleccionUsuario)){
     alert("Error, ingrese un dato valido, menor a 100 o en numeros")
   }else{
     cleanArrayMultiplos()
@@ -162,8 +151,4 @@ function crearDivisiones(seleccion){
     pad.appendChild(divContenedor)
   }
 }
-
-
-
-
 crearDivisiones(numeroPrueba)

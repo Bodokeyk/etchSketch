@@ -6,26 +6,20 @@ html, body{
   font-weight: 500;
 }
 body{
-  background-color: green;
   align-items: center;
 }
 .flex-container{ 
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: yellow;
-  
 }
 .main-header{
   max-height: 100px;
   background-color: red;
-  /*  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
-} */
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 .header-title{
   font-size: 120px;
@@ -33,36 +27,33 @@ body{
 }
 .main-container{
   flex-grow: 1;
-  background-color: grey;
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-evenly;
   text-align: center;
   align-items: stretch;
-  
 }
 .container-block{
-  border: 1px white solid;
   flex-grow: 1;
 }
 .middle{
-  background-color: blue;
+  background-color: rgb(255, 255, 255);
   min-width: 980px;
   display: flex;
   flex-direction: column;
+  margin: 1px;
 }
 .gridDiv{
+background-color: white;
 flex-grow: 0;
-background-color: blue;
 flex-shrink: 1;
 flex-basis: auto;
 display: flex;
 }
 .childDivs{
-background-color: rgb(255, 255, 255);
 flex-shrink: 1;
 flex-basis: auto;
 }
-
 .left, .right{
   display:flex;
   justify-content: center;
@@ -71,11 +62,12 @@ flex-basis: auto;
   padding-bottom: 32px;
 }
 .buttons{
-padding: 32px 32px;
+padding: 48px 48px;
 border-radius: 100%;
+background-color: white;
+box-shadow: none;
 }
 .main-footer{
 background-color: red;
 height: 100px;
-
 }
