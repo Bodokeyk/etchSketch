@@ -6,26 +6,20 @@ html, body{
   font-weight: 500;
 }
 body{
-  background-color: green;
   align-items: center;
 }
 .flex-container{ 
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: yellow;
-  
 }
 .main-header{
   max-height: 100px;
   background-color: red;
-  /*  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
-} */
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 .header-title{
   font-size: 120px;
@@ -33,28 +27,11 @@ body{
 }
 .main-container{
   flex-grow: 1;
-  background-color: grey;
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-evenly;
   text-align: center;
   align-items: stretch;
-  
-}
-.container-block{
-  border: 1px white solid;
-  flex-grow: 1;
-}
-.middle{
-  min-width: 980px;
-  display: flex;
-}
-.gridDiv{
-background-color: blue;
-
-border: 1px white solid;
-flex-wrap:wrap;
-border-radius: 15px;
 }
 .container-block{
   flex-grow: 1;
@@ -80,13 +57,6 @@ flex-basis: auto;
 .left, .right{
   display:flex;
   justify-content: center;
-  background-color: red;
-  padding-bottom: 32px;
-}
-button{
- align-self:flex-end;
-padding: 32px 32px;
-border-radius: 100%;
   align-items: flex-end;
   background-color: red;
   padding-bottom: 32px;
@@ -100,6 +70,4 @@ box-shadow: none;
 .main-footer{
 background-color: red;
 height: 100px;
-
 }
-
