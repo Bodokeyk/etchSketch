@@ -41,27 +41,29 @@ pad.addEventListener("mouseover", (event) => {
     switch(botonFunciones.id){
       case "b&w" : 
       event.target.style.backgroundColor = `rgb(${arrayColores[0]})`
+      event.target.style.opacity = "1";
       break;
       case "colores":
         let colorRandom = generateRandom();
         event.target.style.backgroundColor = `rgb(${colorRandom})`
+        event.target.style.opacity = "1";
+
         break;
       case "tonos": 
 
       //obtenemos el color del fondo y sacamos el Alpha
-      let val1 = event.target.style.backgroundColor;
-       let cosito = +val1.slice(-3, -1);
+      let opacidad = event.target.style.opacity;
+      console.log(opacidad)
 
       //si tiene alfa, se activa la funcion para ir agregando mas poco a poco
-      if(cosito >= 0.1 && cosito < 1.0){
-        event.target.style.backgroundColor = `rgb(from ${val1} r g b / calc(Alpha + 0.1))`
+      if(opacidad >= 0.1 && opacidad < 1.0){
+        opacidad = +opacidad + 0.1;
+        event.target.style.opacity = `${opacidad}`;
 
       }else{
         //si no tenia alfa, se le asigna uno y la proxima vez ya tendra alpha
-        
+        event.target.style.opacity = "0.1";
         event.target.style.backgroundColor = `rgb(${arrayColores[0]})`
-        let cosillo = event.target.style.backgroundColor;
-        event.target.style.backgroundColor = `rgb(from ${cosillo} r g b / 0.1)`
       }
 
       break;
